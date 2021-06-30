@@ -1,0 +1,20 @@
+<template>
+  <template for:each={listOfPolicies} for:item="policy">
+
+    <div key={policy.Id} style="display: flex; flex-wrap: wrap;">
+      <lightning-card >
+        <p slot="title" class="slds-p-horizontal_small">{policy.Name}</p>
+        <!-- <img src={policy.Image_URL__c} alt={policy.Name} width="500" height="600"> -->
+        <p class="slds-p-horizontal_small">$ {policy.Price__c}</p>
+        <lightning-layout>
+        <lightning-layout-item size="6" class="slds-var-p-left_xx-small">
+          <lightning-button variant="success" label="Select" title="Select"
+              onclick={handleSelection} data-id={policy.Id}>
+          </lightning-button>
+      </lightning-layout-item>
+    </lightning-layout>
+      </lightning-card>
+   
+    </div>
+  </template>
+</template>
