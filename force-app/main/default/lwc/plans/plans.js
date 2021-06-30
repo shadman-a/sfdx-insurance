@@ -1,11 +1,12 @@
 import { LightningElement, track } from 'lwc';
-import fetchPolicies from '@salesforce/apex/InsuranceService.getPolicies';
+import getPolicies from '@salesforce/apex/InsuranceService.getPolicies';
 import Id from '@salesforce/user/Id';
 
 export default class Plans extends LightningElement {
   @track listOfPolicies;
   cartId;
   connectedCallback() {
+    console.log("hello")
     getPolicies()
       .then((result) => {
         console.log(result);

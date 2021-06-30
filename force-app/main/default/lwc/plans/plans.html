@@ -1,11 +1,11 @@
 <template>
-  <template for:each={listOfPolicies} for:item="policy">
+  <template class="slds-grid slds-gutters" for:each={listOfPolicies} for:item="policy">
 
-    <div key={policy.Id} style="display: flex; flex-wrap: wrap;">
+    <div key={policy.Id} class="slds-col">
       <lightning-card >
         <p slot="title" class="slds-p-horizontal_small">{policy.Name}</p>
         <!-- <img src={policy.Image_URL__c} alt={policy.Name} width="500" height="600"> -->
-        <p class="slds-p-horizontal_small">$ {policy.Price__c}</p>
+        <p class="slds-p-horizontal_small">$ {policy.Monthly_Premium__c}</p>
         <lightning-layout>
         <lightning-layout-item size="6" class="slds-var-p-left_xx-small">
           <lightning-button variant="success" label="Select" title="Select"
