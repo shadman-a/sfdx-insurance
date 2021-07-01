@@ -1,7 +1,8 @@
 <template>
-  <template class="slds-grid slds-gutters" for:each={listOfPolicies} for:item="policy">
+  <template class="slds-grid" for:each={listOfPolicies} for:item="policy">
 
     <div key={policy.Id} class="slds-col">
+      <c-plans  datesend="Got parent value"></c-plans>
       <lightning-card >
         <p slot="title" class="slds-p-horizontal_small">{policy.Name}</p>
         <!-- <img src={policy.Image_URL__c} alt={policy.Name} width="500" height="600"> -->
